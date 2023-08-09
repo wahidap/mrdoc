@@ -8,9 +8,11 @@ environment:
 
 dependencies:
   bloc: ^8.1.1
+  carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  flutter_launcher_icons: ^0.13.1
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.0
