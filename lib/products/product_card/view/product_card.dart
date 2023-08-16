@@ -1,98 +1,56 @@
 import 'package:flutter/material.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-void main() {
-  runApp(ProductCardsApp());
-}
-
-class ProductCardsApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Product Cards Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: ProductCardsPage(),
-    );
-  }
-}
-
-class Product {
-  final String name;
-  final double price;
-  final String imageUrl;
-
-  Product(this.name, this.price, this.imageUrl);
-}
-
-class ProductCardsPage extends StatelessWidget {
-  final List<Product> products = [
-    // Product('Product 1', 10.0, 'https://via.placeholder.com/150'),
-    // Product('Product 2', 15.0, 'https://via.placeholder.com/150'),
-    // Product('Product 3', 20.0, 'https://via.placeholder.com/150'),
-    // // Add more products here
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Product Cards'),
-      ),
-      body: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) {
-          return ProductCard(product: products[index]);
-        },
-      ),
-    );
-  }
-}
 
 class ProductCard extends StatelessWidget {
-  final Product product;
-
-  ProductCard({required this.product});
+  const ProductCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
-      margin: EdgeInsets.all(10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 150,
-            width: double.infinity,
-            child: Image.network(
-              product.imageUrl,
-              fit: BoxFit.cover,
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10), ),
+        margin: EdgeInsets.all(10),
+        child: Padding(
+          padding: const EdgeInsets.all(4),
+          child: InkWell(
+            // onTap: () {
+            //   Navigator.push(context, MaterialPageRoute(builder: (context) => HotelsList(),));
+            // },
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5,top: 5),
+                    child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10), 
+                  child: Image.asset('assets/images/paracetamol.png',height: 101,),),
+                ),
+                
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('paracetamole',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),),
+                    
+                    Text('4.5'),
+                  ],
+                ),
+                
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('blah',style: TextStyle(fontSize: 12),),
+                          // Icon(FontAwesomeIcons.star,size: 10,color: Colors.yellow,)
+                        ],
+                      ),
+                    ),      
+              ],
+              
             ),
+            
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              product.name,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
-            child: Text(
-              '\$${product.price.toStringAsFixed(2)}',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.green,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+        ),
+      
+      );
   }
 }
