@@ -4,14 +4,6 @@ import 'package:mrdoc/cart/view/cart_page.dart';
 import 'package:mrdoc/products/product_card/view/product_card.dart';
 import 'package:mrdoc/widgets/view/carousel.dart';
 
-// class Product {
-//   final String name;
-//   final double price;
-//   final String imageUrl;
-
-//   Product(this.name, this.price, this.imageUrl);
-// }
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -31,24 +23,15 @@ void initState() {
   
 }
 
-
-
-//  final List<Product> products = [
-//     Product('Product 1', 10.0, 'https://via.placeholder.com/150'),
-//     Product('Product 2', 15.0, 'https://via.placeholder.com/150'),
-//     Product('Product 3', 20.0, 'https://via.placeholder.com/150'),
-//     // Add more products here
-//   ];
 @override
   void dispose() {
     _tabController.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:PreferredSize(
+appBar:PreferredSize(
         preferredSize:Size.fromHeight(80.0) ,
         child: AppBar(
           
@@ -97,10 +80,12 @@ void initState() {
         ),
         
       ),
+
+
+
       body: SingleChildScrollView(
           child: Column(
             children: [
-              // Add your scrollable content here
               Container(child: CarouselWithControls(),
                 height: 200,
               ),
@@ -137,35 +122,7 @@ void initState() {
               ),
             ],
           ),
-        ),
-
-        bottomNavigationBar: BottomAppBar(
-          color: Colors.green,
-          child: TabBar(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-          controller: _tabController,
-          labelPadding: EdgeInsets.symmetric(horizontal: 8),
-          unselectedLabelStyle: TextStyle(fontSize: 10),
-          
-            tabs: [
-            Tab(
-              icon: Icon(Icons.home),
-              text: 'Home',
-            ),
-            Tab(
-              icon: Icon(Icons.shopping_bag),
-              text: 'Orders',
-            ),
-            Tab( 
-              icon: Icon(Icons.person),
-              text: 'Profile',
-            )
-          ]),
-          
-        ),
-        
-        
-      
+        ),  
     );
   }
 }

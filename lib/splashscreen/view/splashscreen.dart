@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mrdoc/counter/counter.dart';
-import 'package:mrdoc/home/view/home_page.dart';
+import 'package:mrdoc/home/view/homepage/home_page.dart';
+import 'package:mrdoc/home/view/launching_page.dart';
 
 void main() => runApp(SplashScreenApp());
 
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) =>LaunchPage ()),
       );
     });
   }
