@@ -86,7 +86,7 @@ void initState() {
         
       // ),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.green,
+          color: Colors.green.shade400,
           child: TabBar(
             padding: EdgeInsets.symmetric(horizontal: 10),
           controller: _tabController,

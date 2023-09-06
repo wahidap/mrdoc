@@ -33,7 +33,7 @@ void initState() {
     return Scaffold(
 appBar:PreferredSize(
         preferredSize:Size.fromHeight(80.0) ,
-        child: AppBar(
+        child: AppBar(backgroundColor: Colors.green.shade400,
           
           actions: [
             IconButton(onPressed: () {
@@ -110,7 +110,7 @@ appBar:PreferredSize(
                   Container(
                     width: 200,
                     height: 200,
-                    color: Colors.blue,
+                    color: Colors.green.shade400,
                     child: ProductCard(),
  
                   ),
