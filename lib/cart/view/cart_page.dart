@@ -8,7 +8,6 @@ class Cart extends StatelessWidget {
     return MaterialApp(
       title: 'Shopping Cart',
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
       ),
       home: CartPage(),
     );

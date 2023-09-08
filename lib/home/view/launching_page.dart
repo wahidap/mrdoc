@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:mrdoc/cart/view/cart_page.dart';
 import 'package:mrdoc/home/home_page.dart';
-import 'package:mrdoc/home/view/orderpage/order_page.dart';
-import 'package:mrdoc/home/view/profilepage/profile_page.dart';
+import 'package:mrdoc/pages/order/orderpage/view/order_page.dart';
+import 'package:mrdoc/pages/profile/profilepage/view/profile_page.dart';
 import 'package:mrdoc/products/product_card/view/product_card.dart';
 import 'package:mrdoc/widgets/view/carousel.dart';
 
@@ -86,7 +86,7 @@ void initState() {
         
       // ),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.green.shade400,
+          color: Color.fromRGBO(7, 57, 109,100),
           child: TabBar(
             padding: EdgeInsets.symmetric(horizontal: 10),
           controller: _tabController,
@@ -96,15 +96,15 @@ void initState() {
             tabs: [
             Tab(
               
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home_filled),
               text: 'Home',
             ),
             Tab(
-              icon: Icon(Icons.shopping_bag),
+              icon: Icon(Icons.shopping_bag_sharp),
               text: 'Orders',
             ),
             Tab( 
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.person_sharp),
               text: 'Profile',
             )
           ]),

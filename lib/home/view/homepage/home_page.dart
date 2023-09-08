@@ -33,7 +33,7 @@ void initState() {
     return Scaffold(
 appBar:PreferredSize(
         preferredSize:Size.fromHeight(80.0) ,
-        child: AppBar(backgroundColor: Colors.green.shade400,
+        child: AppBar(backgroundColor:Color.fromRGBO(7, 57, 109,100),
           
           actions: [
             IconButton(onPressed: () {
@@ -63,14 +63,14 @@ appBar:PreferredSize(
                   decoration: InputDecoration(
                     
                   // focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.all()),
-                  suffixIcon:Icon(Icons.search,color: Colors.black,) ,
+                  suffixIcon:Icon(Icons.search,color: Color.fromRGBO(7, 57, 109,100),) ,
                   // prefix: Icon(Icons.search,color: Colors.white,),
                   
                     hintText: '    Search for medicines',
                     border: InputBorder.none,
-                    hintStyle: TextStyle(color: Colors.black54),
+                    hintStyle: TextStyle(color: Color.fromRGBO(7, 57, 109,100),),
                   ),
-                  style: TextStyle(color: Colors.black12),
+                  style: TextStyle(color: Color.fromRGBO(7, 57, 109,100),),
                        ),
                ),
              ],
@@ -110,7 +110,7 @@ appBar:PreferredSize(
                   Container(
                     width: 200,
                     height: 200,
-                    color: Colors.green.shade400,
+                    color: Color.fromRGBO(7, 57, 109,100),
                     child: ProductCard(),
  
                   ),
@@ -118,7 +118,7 @@ appBar:PreferredSize(
               ),
               Container(
                 height: 200,
-                color: Colors.black,
+                color: Color.fromRGBO(7, 57, 109,100),
               ),
             ],
           ),
