@@ -81,7 +81,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:mrdoc/pages/profile/modles/view/profile_model.dart';
+import 'package:mrdoc/pages/profile/models/view/profile_model.dart';
 
 import 'package:mrdoc/pages/profile/tile/profile_tile.dart';
 
