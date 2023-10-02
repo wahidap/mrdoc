@@ -1,25 +1,6 @@
-// import 'package:flutter/material.dart';
-
-// class OrderPage extends StatefulWidget {
-//   const OrderPage({super.key});
-
-//   @override
-//   State<OrderPage> createState() => _OrderPageState();
-// }
-
-// class _OrderPageState extends State<OrderPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Text('hello'),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
 import 'package:mrdoc/pages/order/ordertile/view/order_tile.dart';
-import '../../model/view/order_model.dart';
+import 'package:mrdoc/pages/order/model/view/order_model.dart';
 
 class OrderPage extends StatelessWidget {
    OrderPage({super.key});

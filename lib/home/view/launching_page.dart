@@ -5,7 +5,6 @@ import 'package:mrdoc/home/home_page.dart';
 import 'package:mrdoc/pages/order/orderpage/view/order_page.dart';
 import 'package:mrdoc/pages/profile/profilepage/view/profile_page.dart';
 import 'package:mrdoc/products/product_card/view/product_card.dart';
-import 'package:mrdoc/widgets/view/carousel.dart';
 
 
 
@@ -36,55 +35,7 @@ void initState() {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar:PreferredSize(
-      //   preferredSize:Size.fromHeight(80.0) ,
-      //   child: AppBar(
-          
-      //     actions: [
-      //       IconButton(onPressed: () {
-      //         Navigator.push(
-      //         context,
-      //         MaterialPageRoute(builder: (context) => CartPage()),
-      //         );
-              
-      //       }, icon: Icon(Icons.shopping_cart)),
       
-      //     ],
-      //      title:Column(
-      //        children: [
-              
-      //         SizedBox(
-      //           height: 10
-
-      //           ,
-      //         ),
-      //          Container(
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(12.0),
-      //             color: Colors.white,
-      //           ),
-      //            child: TextField(
-                  
-      //             decoration: InputDecoration(
-                    
-      //             // focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.all()),
-      //             suffixIcon:Icon(Icons.search,color: Colors.black,) ,
-      //             // prefix: Icon(Icons.search,color: Colors.white,),
-                  
-      //               hintText: '    Search for medicines',
-      //               border: InputBorder.none,
-      //               hintStyle: TextStyle(color: Colors.black54),
-      //             ),
-      //             style: TextStyle(color: Colors.black12),
-      //                  ),
-      //          ),
-      //        ],
-             
-      //      ),
-        
-      //   ),
-        
-      // ),
         bottomNavigationBar: BottomAppBar(
           color: Color.fromRGBO(7, 57, 109,100),
           child: TabBar(

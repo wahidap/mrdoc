@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:mrdoc/counter/counter.dart';
-import 'package:mrdoc/home/view/homepage/home_page.dart';
 import 'package:mrdoc/home/view/launching_page.dart';
+import 'package:mrdoc/login/view/login_page.dart';
 
 void main() => runApp(SplashScreenApp());
 
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) =>LaunchPage ()),
+        MaterialPageRoute(builder: (context) =>LoginPage()),
       );
     });
   }
@@ -37,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Center(
-        child: Image.asset('assets/images/logo mrdoc.png',)
+        child: Image.asset('assets/images/logo mrdoc.png',fit: BoxFit.cover,)
       ),
     );
   }

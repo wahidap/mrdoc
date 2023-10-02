@@ -66,6 +66,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(7, 57, 109,100),
         title: Text('Shopping Cart'),
       ),
       body: ListView.builder(
@@ -113,7 +114,7 @@ class _CartPageState extends State<CartPage> {
               onPressed: () {
                 // Implement your checkout logic here
               },
-              child: Text('Checkout'),
+              child: Text('Checkout', selectionColor:Color.fromRGBO(7, 57, 109,100),),
             ),
           ],
         ),
