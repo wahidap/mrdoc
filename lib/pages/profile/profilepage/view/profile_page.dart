@@ -82,6 +82,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mrdoc/pages/profile/models/view/profile_model.dart';
+import 'package:mrdoc/pages/profile/pages/myaccount/view/my_account.dart';
 
 import 'package:mrdoc/pages/profile/tile/profile_tile.dart';
 
@@ -95,7 +96,9 @@ class ProfilePage extends StatelessWidget {
         Icons.person_outlined,
         color: Color.fromRGBO(7, 57, 109, 100),
       ),
-      onTapAction: () {},
+      onTapAction: () {
+  
+},
     ),
     User(
       name: 'Settings',
@@ -126,10 +129,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Profile'),
-      //   centerTitle: true,
-      // ),
+     
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
