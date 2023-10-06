@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class User {
+class User2 {
    String name;
    Icon icon;
   VoidCallback onTapAction; 
 
-  User({
+  User2({
     required this.name,
     required this.icon,
     required this.onTapAction,

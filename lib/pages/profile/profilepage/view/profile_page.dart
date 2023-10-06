@@ -80,25 +80,32 @@
 //   }
 // }
 
+
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mrdoc/login/login_page.dart';
 import 'package:mrdoc/pages/profile/models/view/profile_model.dart';
 import 'package:mrdoc/pages/profile/pages/myaccount/view/my_account.dart';
 
 import 'package:mrdoc/pages/profile/tile/profile_tile.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   ProfilePage({super.key});
 
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
   List<User> profileList = [
     User(
-      name: 'My Account',
+     name: 'My Account',
       icon: Icon(
         Icons.person_outlined,
         color: Color.fromRGBO(7, 57, 109, 100),
       ),
-      onTapAction: () {
-  
-},
+      onTap: () =>Get.to(MyAccount()),
     ),
     User(
       name: 'Settings',
@@ -106,7 +113,7 @@ class ProfilePage extends StatelessWidget {
         Icons.settings_outlined,
         color: Color.fromRGBO(7, 57, 109, 100),
       ),
-      onTapAction: () {},
+      onTap: () {},
     ),
     User(
       name: 'Help Center',
@@ -114,7 +121,7 @@ class ProfilePage extends StatelessWidget {
         Icons.question_mark_outlined,
         color: Color.fromRGBO(7, 57, 109, 100),
       ),
-      onTapAction: () {},
+      onTap: () {},
     ),
     User(
       name: 'Log Out',
@@ -122,7 +129,7 @@ class ProfilePage extends StatelessWidget {
         Icons.logout,
         color: Color.fromRGBO(7, 57, 109, 100),
       ),
-      onTapAction: () {},
+      onTap: () {},
     ),
   ];
 
@@ -168,7 +175,9 @@ class ProfilePage extends StatelessWidget {
             child: ListView.builder(
               itemCount: profileList.length,
               itemBuilder: (context, index) {
-                return ProfileTile(userdata: profileList[index]);
+                return InkWell(
+                   onTap: profileList[index].onTap as Function()?,
+                  child: ProfileTile(userdata: profileList[index]));
               },
             ),
           ),

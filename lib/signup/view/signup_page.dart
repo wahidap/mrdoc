@@ -8,9 +8,11 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
-        foregroundColor: Color.fromRGBO(7, 57, 109,100),
-        title: Center(child: Text('Sign Up'),),
+        title: Center(child: Text('Sign Up'),
+        
+        ),
       ),
   body:
       Padding(

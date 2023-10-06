@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../model/view/order_model.dart';
 
 class OrderTile extends StatelessWidget {
-  final User userdata;
+  final User2 User2data;
 
-  OrderTile({Key? key, required this.userdata}) : super(key: key);
+  OrderTile({Key? key, required this.User2data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,8 @@ class OrderTile extends StatelessWidget {
           onTap: () {
             
           },
-        title: Text(userdata.name),
-        leading: userdata.icon,
+        title: Text(User2data.name),
+        leading: User2data.icon,
     
     
     

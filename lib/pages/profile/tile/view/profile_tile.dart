@@ -30,6 +30,7 @@
 import 'package:flutter/material.dart';
 import 'package:mrdoc/pages/profile/models/view/profile_model.dart';
 
+
 class ProfileTile extends StatelessWidget {
   final User userdata;
 
@@ -46,9 +47,8 @@ class ProfileTile extends StatelessWidget {
         ),
         child: 
         ListTile(
-          onTap: () {
-            
-          },
+          onTap: ()=>
+           userdata.onTap(),
         title: Text(userdata.name),
         leading: userdata.icon,
     

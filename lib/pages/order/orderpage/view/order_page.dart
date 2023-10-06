@@ -4,8 +4,8 @@ import 'package:mrdoc/pages/order/model/view/order_model.dart';
 
 class OrderPage extends StatelessWidget {
    OrderPage({super.key});
-       List<User> orderList = [
-    User(
+       List<User2> orderList = [
+    User2(
       name: 'Processing',
       icon: Icon(
         Icons.polymer,
@@ -13,7 +13,7 @@ class OrderPage extends StatelessWidget {
       ),
       onTapAction: () {},
     ),
-    User(
+    User2(
       name: 'Awaiting Payments',
       icon: Icon(
         Icons.payment_outlined,
@@ -21,7 +21,7 @@ class OrderPage extends StatelessWidget {
       ),
       onTapAction: () {},
     ),
-    User(
+    User2(
       name: 'Delivered',
       icon: Icon(
         Icons.delivery_dining_outlined,
@@ -29,7 +29,7 @@ class OrderPage extends StatelessWidget {
       ),
       onTapAction: () {},
     ),
-    User(
+    User2(
       name: 'Cancled Orders',
       icon: Icon(
         Icons.cancel_outlined,
@@ -45,6 +45,7 @@ class OrderPage extends StatelessWidget {
       title: Center(
         child: Text(
           'Order',
+          
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -71,7 +72,7 @@ class OrderPage extends StatelessWidget {
           child: ListView.builder(
             itemCount: orderList.length,
             itemBuilder: (context, index) {
-              return OrderTile(userdata: orderList[index]);
+              return OrderTile(User2data: orderList[index]);
             },
           ),
         ),
